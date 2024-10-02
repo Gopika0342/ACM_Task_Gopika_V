@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal Portfolio Website </title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/4aff0a0577.js" crossorigin="anonymous"></script>
+</head>
+<body>
+<div id="header">
+    <div class="container">
+        <nav>
+            <img src="IMAGES/logo1.jpg" class="logo">
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Services</a></li>
+                <li><a href="#">Portfolio</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </nav>
+        <div class="header-text">
+            <p>Web Developer</p>
+            <h1>Hi,I'm <span>Gopika V</span><br> From Kerala</h1>
+        </div>
+    </div>
+</div>
+
+<div id="about">
+    <div class="container">
+        <div class="row">
+            <div class="about-col-1">
+                <img src="IMAGES/me1.jpg">
+            </div>
+            <div class="about-col-2">
+                <h1 class="sub-title">About Me</h1>
+                <p>I’m currently pursuing my studies in Data Science and Artificial Intelligence at Amrita Vishwa Vidyapeetham, Amritapuri. My fascination with technology drives my desire to leverage data in innovative ways to tackle real-world challenges.
+                    I enjoy diving into complex problems that require a mix of analytical thinking and creativity. With a focus on machine learning, data analysis, and programming, I’m committed to honing my skills and expanding my knowledge. I also have a strong passion for web development, where I love creating engaging and user-friendly applications.
+                    I believe in the power of collaboration and am always open to working on projects that can make a difference.</p>
+
+                <div class="tab-titles">
+                    <p class="tab-links active-link" onclick="opentab('skills')"> Skills</p>
+                    <p class="tab-links" onclick="opentab('experience')"> Experiance</p>
+                    <p class="tab-links" onclick="opentab('education')"> Education</p>
+                </div>  
+                <div class="tab-contents active-tab" id="skills">
+                    <ul>
+                       <li><span>Programming Languages</span><br>Develops games using different languages</li>
+                       <li><span>Web Development</span><br>Web app Development</li> 
+                       <li><span>Machine Learning</span><br>Training Machines</li>  
+                    </ul>
+                </div>
+                <div class="tab-contents" id="experience">
+                    <ul>
+                       <li><span>2024-Current</span><br>Web Development Training</li>
+                       <li><span>2022-2023</span><br>Team Lead of Minesweeper Game Project</li> 
+                    </ul>
+                </div>
+                <div class="tab-contents" id="education">
+                    <ul>
+                       <li><span>2023-2024</span><br>Data Science And Artificial Intelligence Student at Amrita University</li>
+                       <li><span>2020-2022</span><br>High Schooling at Holy Cross</li>   
+                    </ul>
+                </div>    
+            </div>
+        </div>
+    </div>
+</div>
+
+<div id="services">
+    <div class="container">
+        <h1 class="sub-title">My Services</h1>
+        <div class="services-list">
+            <div>
+               <i class="fa-solid fa-code"></i>
+               <h2>Web Design</h2> 
+               <p>Creates Responsive Websites and redesign Website </p>
+               <a href="#">Learn more</a>
+            </div>
+            <div>
+                <i class="fa-solid fa-gamepad"></i>
+                <h2>Game Development</h2> 
+                <p>Deveplops games using various programming language</p>
+                <a href="#">Learn more</a>
+             </div>
+             <div>
+                <i class="fa-solid fa-crop-simple"></i>
+                <h2>UI/UX Design</h2> 
+                <p>Creates UX/UI Design for online products</p>
+                <a href="#">Learn more</a>
+             </div>
+        </div>
+    </div>
+</div>
+
+<div id="portfolio">
+    <div class="container">
+        <h1 class="sub-title">My Work</h1>
+        <div class="work-list">
+            <div class="work">
+                <img src="IMAGES/work2.png">
+                <div class="layer">
+                    <h3>Social Media App</h3>
+                    <p>The app connects you to the talented people around the world.
+                    Download it from play store</p>
+                    <a href="#"><i class="fa-solid fa-link"></i></a>
+                </div>
+            </div>
+            <div class="work">
+                <img src="IMAGES/work 3.jpg">
+                <div class="layer">
+                    <h3>Music App</h3>
+                    <p>The app connects you to the talented people around the world.
+                    Download it from play store</p>
+                    <a href="#"><i class="fa-solid fa-link"></i></a>
+                </div>
+            </div>
+            <div class="work">
+                <img src="IMAGES/images.jpeg">
+                <div class="layer">
+                    <h3>Online Shopping App</h3>
+                    <p>The app connects you to the talented people around the world.
+                    Download it from play store</p>
+                    <a href="#"><i class="fa-solid fa-link"></i></a>
+                </div>
+            </div>
+        </div>
+        <a href="#" class="btn">See more</a>
+    </div>
+</div>
+
+<script>
+
+    var tablinks = document.getElementsByClassName("tab-links");
+    var tabcontents = document.getElementsByClassName("tab-contents");
+
+    function opentab(tabname){
+        for(tablink of tablinks){
+            tablink.classList.remove("active-link");
+        }
+        for(tabcontent of tabcontents){
+            tabcontent.classList.remove("active-tab");
+        }
+        event.currentTarget.classList.add("active-link");
+        document.getElementById(tabname).classList.add("active-tab");
+    }
+</script>
+
+</body>
+</html>
